@@ -1,6 +1,7 @@
 import React,{ useState, useEffect, setError } from "react";
 import SearchBox from "../components/SearchBox";
 import BookCard from "../components/BookCard";
+import SaveBtn from "../components/SaveBtn";
 import API from "../utils/API";
 import { Container, Col, Row } from "react-bootstrap";
 
@@ -68,9 +69,10 @@ function Search() {
                                       authors={book.volumeInfo.authors}
                                       description={book.volumeInfo.description}
                                       link={book.volumeInfo.previewLink}
-                                      imgsrc={book.volumeInfo.imageLinks.thumbnail}
-                                      handleSave={handleSave}
-                            />
+                                      imgsrc={book.volumeInfo.imageLinks.thumbnail}         
+                            >
+                              <SaveBtn id={book.id} handleSave={handleSave} />
+                            </BookCard>
                 })    
                 }
                 </Col>

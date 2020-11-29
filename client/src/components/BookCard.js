@@ -29,7 +29,7 @@ function BookCard(props) {
                 </Card.Text>
             </Card.Body>
             <Card.Footer>
-            <Button variant="primary" id= {props.id} onClick={props.handleSave}>Save</Button>
+            {props.children}
                 {' '}
                 <Button variant="primary"><a style={styles.linkstyle} href={props.link}>View</a></Button>
             </Card.Footer>

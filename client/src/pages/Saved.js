@@ -1,7 +1,8 @@
 import React,{ useState, useEffect, setError } from "react";
-import BookCardSaved from "../components/BookCardSaved";
+import BookCard from "../components/BookCard";
 import API from "../utils/API";
 import { Container, Col, Row } from "react-bootstrap";
+import DeleteBtn from "../components/DeleteBtn";
 
 
 
@@ -35,7 +36,7 @@ function Saved() {
             <Row>
                 <Col>
                 {savedBooks.map(book => {
-                    return <BookCardSaved  
+                    return <BookCard  
                                       key={book.id}
                                       id={book.id}
                                       title={book.title}
@@ -43,8 +44,9 @@ function Saved() {
                                       description={book.description}
                                       link={book.link}
                                       imgsrc={book.imgsrc}
-                                      handleDelete={handleDelete}
-                            />          
+                            >
+                              <DeleteBtn id={book.id} handleDelete={handleDelete} />
+                            </BookCard>          
                 })}
                 </Col>
             </Row>

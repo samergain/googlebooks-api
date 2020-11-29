@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 
 function SaveBtn(props) {
     return(
-        <Button variant="primary" onClick={props.handleSave}>Save</Button>
+        <Button variant="primary" id= {props.id} onClick={props.handleSave}>Save</Button>
     )
 }
 

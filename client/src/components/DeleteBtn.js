@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 
 function DeleteBtn(props) {
     return(
-        <Button variant="primary" onClick={props.handleDelete}>Delete</Button>
+        <Button variant="primary" id= {props.id} onClick={props.handleDelete}>Delete</Button>
     )
 }
 
