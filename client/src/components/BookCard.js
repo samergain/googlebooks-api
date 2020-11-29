@@ -31,7 +31,7 @@ function BookCard(props) {
             <Card.Footer>
             {props.children}
                 {' '}
-                <Button variant="primary"><a style={styles.linkstyle} href={props.link}>View</a></Button>
+                <Button variant="primary"><a style={styles.linkstyle} href={props.link} target="_blank">View</a></Button>
             </Card.Footer>
         </Card>
     )
